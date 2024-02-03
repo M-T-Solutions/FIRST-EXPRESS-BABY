@@ -27,7 +27,7 @@ let BooksPerPage = 10
         .sort({Name : 1})
         .exec()
         .then((Booklist) => {
-            res.render('database/Books', { 
+            res.render('database/books', { 
                 title: 'Book List', 
                 Booklist: Booklist, 
                 P: page, 
@@ -54,7 +54,7 @@ let BooksPerPage = 10
         .sort({ Name: 1 })
         .forEach(book => books.push(book))
         .then(() => {
-            res.render('database/Books', {title: 'Book List', Booklist:books, P:page})
+            res.render('database/books', {title: 'Book List', Booklist:books, P:page})
             //console.log(books)
         })
         .catch(() => {
